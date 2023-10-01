@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto Slab", serif;
+}
+
+.card-body tbody tr td img {
+  height: 65px;
+  width: 65px;
+  object-fit: cover;
+}
+
+.product-image img {
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+}

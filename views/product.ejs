@@ -1,0 +1,49 @@
+<div class="container my-5">
+  <div class="row">
+    <div class="col-md-8 offset-md-2 justify-content-center">
+      <a class="btn btn-primary mb-3" href="/create">Add New Products</a>
+      <div class="card shadow">
+        <div class="card-body text-center">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Photo</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% products.forEach((item, index) => { %>
+              <tr class="align-middle">
+                <td><%= index + 1 %></td>
+                <td>
+                  <img src="/product/<%= item.photo %>" alt="Image" />
+                </td>
+                <td><%= item.title %></td>
+                <td><span>$</span><%= item.regularPrice %></td>
+                <td><%= item.stock %></td>
+                <td>
+                  <a class="btn btn-sm btn-info" href="/single/<%= item.slug %>"
+                    ><i class="fa fa-eye"></i
+                  ></a>
+                  <a class="btn btn-sm btn-warning" href="/edit/<%= item.id %>"
+                    ><i class="fa fa-edit"></i
+                  ></a>
+                  <a
+                    class="btn btn-sm btn-danger"
+                    href="/product-delete/<%= item.id %>"
+                    ><i class="fa fa-trash"></i
+                  ></a>
+                </td>
+              </tr>
+              <% }) %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
